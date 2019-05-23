@@ -35,11 +35,13 @@ import java.io.IOException;
 
 
 /**
- * @author: yzq
- * @date: 2017/10/26 15:22
- * @declare :扫一扫
+ * 扫一扫
+ *
+ * @author Zhon JianXiong
+ *
+ * @time 2019/5/23 11:45
+ *
  */
-
 public class CaptureActivity extends AppCompatActivity implements SurfaceHolder.Callback, View.OnClickListener {
 
     private static final String TAG = CaptureActivity.class.getSimpleName();
@@ -96,10 +98,8 @@ public class CaptureActivity extends AppCompatActivity implements SurfaceHolder.
         try {
             config = (ZxingConfig) getIntent().getExtras().get(Constant.INTENT_ZXING_CONFIG);
         } catch (Exception e) {
-
             Log.i("config", e.toString());
         }
-
         if (config == null) {
             config = new ZxingConfig();
         }
